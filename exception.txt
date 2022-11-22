@@ -1,0 +1,28 @@
+global Exception filter has two parts 
+1.recognized exception ----> Http
+2. unrecognized exception --> set internal servedr error  as message and status code as 500
+
+Built-in HTTP exceptions#
+Nest provides a set of standard exceptions that inherit from the base HttpException. These are exposed from the @nestjs/common package, and represent many of the most common HTTP exceptions:
+
+BadRequestException
+UnauthorizedException
+NotFoundException
+ForbiddenException
+NotAcceptableException
+RequestTimeoutException
+ConflictException
+GoneException
+HttpVersionNotSupportedException
+PayloadTooLargeException
+UnsupportedMediaTypeException
+UnprocessableEntityException
+InternalServerErrorException
+NotImplementedException
+ImATeapotException
+MethodNotAllowedException
+BadGatewayException
+ServiceUnavailableException
+GatewayTimeoutException
+PreconditionFailedException
+All the built-in exceptions can also provide both an error cause and an error description using the options parameter:

@@ -1,0 +1,33 @@
+middleware is the function that get execute before the request handler(controller)
+
+to implement middleware we dont have any property in @module  like import provider controller
+we need to implement inside module class by impl
+client -------------> middleware ---------> request handler (controller)
+
+there are two types of middleware
+1.module based (registered at module.ts file)
+2.global based 
+
+
+midldleware can be configured in two ways
+1.function based
+2.class based (used when dependency need to be injected) 
+
+
+
+function middleware
+
+function userAgent(req:Request,res:Response,next:NextFunction){
+    request--->from client
+    response--->sening to client
+    next-->its a function which call the next middleware if there,else it calls to the request handler(chain)
+}
+
+
+
+if we want to make middleware global 
+
+1. inside main.ts
+ than we need to the middleware to be function not the class
+2. inside app.module.ts
+    than same implement nest module and configure ther
